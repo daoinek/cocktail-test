@@ -27,6 +27,7 @@ class CocktailsDataSource {
     static var dataIsLoaden = false
     static var filterIsLoaden = false
     private var categories: [String] = []
+    var myDrinks: [String: [Cocktail]] = [:]
     private var allCocktails: [String: [[String: String]]] = [:]
     private var drinks: [String: [[String: String]]] = [:]
     private var selectedCategoryName: String?
@@ -87,7 +88,7 @@ class CocktailsDataSource {
                 self.allCocktails[category] = cocktailsDictionary!
                 self.drinks[category] = cocktailsDictionary!
                 self.loadenData = true
-                self.loadenData = false
+                self.loadenData = false                
             }
         }
     }
